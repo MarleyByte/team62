@@ -210,7 +210,6 @@ body, .homeContainer{
 	display: grid;
 	grid-template-columns: 1fr;
 	height: 100%;
-
 }
 .elixirCousines .foodImg{
 grid-area: cousine;
@@ -289,6 +288,7 @@ background-color: rgb(29, 17, 17);
 .homeContainer .elixirCousines img,
 .homeContainer .elixirBars img {
 	height: 500%;
+	z-index: 30;
 }
 .homeContainer .navContainer .navBar{
     grid-area: navBar;
@@ -342,4 +342,7 @@ background-color: rgb(29, 17, 17);
 	font-weight: 830;
 	margin-right: 10%;
 	}
+}
+footer{
+	height: 40%;
 }
