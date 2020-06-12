@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Elixir hotel</title>
+	<link rel="stylesheet" href="css/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $(".navMenu").on("click",function(){
+        $(".hideNav li a").toggleClass("navList");
+    });
+ });
+    </script>
+</head>
+<body>
+    
+    <div class="homeContainer">
+        <!--nav starts here-->
+         <div class="navContainer">
+            <div class="logo"><img src="images/logo.jpeg" alt="logo"></div>
+            <div class="navBar">
+                <h3 class="navMenu" >MENU</h3>
+                <ul  id="navLinks" class="hideNav">
+                    <li ><a href="#" class="navList">HOME</a></li>
+                    <li ><a href="#" class="navList">ACCOMODATION</a></li>
+                    <li ><a href="#" class="navList">FEATURES</a></li>
+                    <li ><a href="#" class="navList">GALLERY</a></li>
+                    <li ><a href="#" class="navList">NEWS</a></li>
+                    <li ><a href="#" class="navList">CONTACT US</a></li>
+                </ul>
+            </div>
+                    <div class="signup"><a href="#" id="signup"><h4>SIGNUP</h4></a></div>
+                    <div class="login"><h4 id="login"><h4><a href="#">Login</a></h4></div>        
+    </div>  
+    <!--nav ends here-->
+
+		<div class="elixirRooms";>
+			<figure>
+				<img src="images/bed.jpg" alt="rooms" >
+				<figcaption>Elixir Rooms</figcaption>
+				<h2>OUR FACILITIES</h2>
+			</figure>
+			<p>we provide the most comfortable  matress to make you feel<br>comfortable when sleeping <a href="#" class="showMore">&#8594 Show more</a></p>
+			
+			<!--<h1>Our Facilities</h1>-->
+		</div>
+
+		<div class="elixirBars" >
+			<div >
+				<div class="imgContainer imagesCont barCont" ><img src="images/bar.jpg" alt="Bar" style="width:100%; "></div>
+			</div>
+			<div class="elxBarTitle" ><h3>Elixir Bar</h3><p id="elixBarProvide">Elixir bar provides all drinks you could ever ask<br>for, and it is surely one of the best ever!!!</p>
+			<p id="showCont"><a href="#" class="showMore"> &#8594 Show more</a></p>
+			</div>
+			<!--<h3>Etixir Rooms</h3>
+			<p>we provide the most comfortable matress to make you comfortable when sleeping</p>
+			<a class="fix-me button" href="Rooms">Show More</a>-->
+		</div>	
+
+		<div class="elixirCousines" >
+			<div class="elxCousinesTitle"><h3>Elixir Cousine</h3>
+				<p id="elixBarProvide">
+				At Elixir cousines, we have the most of the best chef around and we<br>promomise to repay you if you don't love it!</p>
+				<p id="showCont"><a href="#" class="showMore"> &#8594 Show more</a></p>
+			</div>
+			<div class="foodImg imagesCont cousineCont">
+				<img src="images/food.jpg" alt="Bar" style="width:100%;">
+			</div>
+			<!--<h3>Etixir Bar</h3>
+			<p>Etixir bar provides all drinks you could ever ask for and it is surely one of the best ever</p>
+			<a class="fix-me button" href="Bar">Show More</a>-->
+		</div>
+
+		<div class="elixirLaundry" >
+			<div class="imgContainer imagesCont lauCont">
+				<img src="images/lau.jpg" alt="Bar" style="width:100%; ">
+			</div>
+			<div  class="elxLauTitle">
+				<h3>Elixir Laundry</h3>
+				<p id="elixLauProvide">
+				Elixir bar provides all drinks you could ever ask<br>for, and it is surely one of the best ever!!!</p>
+				<p id="showCont"><a href="#" class="showMore"> &#8594 Show more</a></p>
+			</div>
+			<!--<h3>Etixir Cuisine</h3>
+			<p>At Etixir cuisine, we have most of the best chef around and will promise to repay you if you don't love it</p>
+			<a class="fix-me button" href="Food">Show More</a>-->
+		</div>
+
+	<footer style="height: 200px;">
+		<p>&copy; 2020 ELIXIR Hotels</p>
+            <p>Address: No 16 off Lekki Express, Transitions building lagos state Nigeria</p>
+            <p>Telephone: 080900000599</p>
+	</footer>
+</div>
+
+</body>
+</html>
