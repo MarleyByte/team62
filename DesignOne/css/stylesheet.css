@@ -98,6 +98,7 @@ body, .homeContainer{
 	position: absolute;
 	top: 33%;
 	left: 35%;
+	text-align:center;
 	opacity: 0.8;
 	background-color: purple;
 	color: white;
