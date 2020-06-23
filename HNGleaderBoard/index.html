@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaderBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navBar{
+            grid-area: nav;
+            background-color: rgb(0, 255, 204);
+            height: 5em;
+        }
+        .topScoreBg{
+            grid-area: topScor;
+            background-color:rgb(250, 248, 244);
+            height: auto;
+            margin-right: 1em;
+            padding-left:17%;
+        }
+        .topScore{
+            position: fixed;
+            background-image: url('images/topScore.JPG');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: bottom;
+            background-color:rgb(250, 248, 244);
+            opacity: 0.7;
+            height: 100%;
+            width: 23%;
+            left: 3em;
+            padding-top: 13%;
+        }
+        .mainTab{
+            grid-area: mainTable;
+            background-color: rgb(247, 247, 247);
+            height: auto;
+        }
+        .footer{
+            grid-area: footr;
+            background-color: rgb(83, 14, 83);
+            height: 5em;
+        }
+        .bodyWrapper{
+            position: relative;
+            display: grid;
+            grid-template-areas: 'nav nav nav'
+            'topScor mainTable mainTable'
+            'topScor footr footr';
+        }
+
+        .intern{
+            background-color: white;
+            height: 6em;
+            margin-top: 5%;
+            width: 80%;
+            margin-left: 8%;
+            border-radius: 15px;
+            padding-right: 10%;
+        }
+        .intern li img{
+            border-radius: 50%;
+        }
+        .navBar{
+            display: grid;
+            grid-template-columns: 73% 27%;
+        }
+        .navigation ul{
+            margin-left: 56%;
+            margin-top: 5%;
+        }
+        .navigation ul li{
+            display: inline-block;
+            margin-left: 5%;
+        }
+        .navigation ul li a{
+            text-decoration: none;
+            color: rgb(207, 128, 38);
+            font-size: 145%;
+            font-weight: bolder;
+        }
+        .navigation ul li a:hover{
+            border-bottom: 1.5px solid burlywood;
+            color: rgb(94, 95, 11);
+        }
+        .searchBar input{
+            margin-top: 13%;
+            font-size: 125%;
+            border-radius: 7px;
+            background-image: url('images/searchIcon.JPG');
+            background-repeat: no-repeat;
+            background-size: 10%;
+            padding-left: 10%;
+        }
+        .score{
+            float: right;
+        }
+        .score h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(236, 204, 17);
+            background-color: rgb(22, 22, 21);
+            padding: 0.3em;
+        }
+        .first img,.second img,.third img{
+                width: 15%;
+                height: 15%;
+                margin-left: 2em;
+        }
+        .footer{
+            padding-left: 37%;
+            opacity: 0.9;
+            color: whitesmoke;
+        }
+        li{
+            list-style-type: none;
+        }
+        .sortBut button{
+            background-color: rgb(248, 245, 245);
+            border-radius: 4px;
+            margin-top: 13%;
+            font-size: 125%;
+            background-size: 10%;
+        }
+        .sortBut button:hover{
+            background-color: rgb(102, 134, 28);
+        }
+        .sortBut button a{text-decoration: none; color: rgb(214, 93, 22);}
+        .sortBut button a:hover{ color: rgb(255, 254, 254);}
+        @media screen and (max-width: 450px) {
+            .bodyWrapper{
+            position: relative;
+            display: grid;
+            grid-template-areas: 'nav'
+            'topScor'
+            'mainTable'
+            'footr';
+        }
+        .topScoreBg{
+            grid-area: topScore;
+            background-color: rgb(24, 197, 105);
+            height: 25em;
+        }
+        .intern{
+            background-color: white;
+            height: 2em;
+            margin-top: 5%;
+            width: 90%;
+            height: 4em;
+            margin-left: 2%;
+            border-radius: 15px;
+            padding-right: 10%;
+        }
+        .intern li img{
+            border-radius: 60%;
+            width: 20%;
+            height: 20%;
+        }
+        .allInterns ul{
+            padding-left: 0;
+        }
+        .score h1{
+            font-size: 1em;
+            padding: 0.05em;
+        }
+        .footer, .navBar,.mainTap{
+            width: 100vw;
+        }
+        .navigation ul{
+            margin-left: 0;
+        }
+        .navigation ul li{
+            display: block;
+            margin-left: 0;
+        }
+        .navigation ul li a{
+            font-size: 1em;
+        }
+        .navBar{
+            grid-template-columns: 50% 50%;
+        }
+        .sortBut{
+            padding-left: 5%;
+            font-size: 70%;
+            z-index: 10;
+        }
+        .topScore{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            position: static;
+            grid-area: topScor;
+            background-image: url('images/topScore.JPG');
+            background-position: bottom;
+            background-color:rgb(250, 248, 244);
+            opacity: 0.7;
+            height: 100%;
+            width: 80%;
+            left: 3em;
+            padding-top: 13%;
+        }
+        .topScore img{
+            width: 65%;
+        }
+        .topScore h3{
+            display: none;
+        }
+        .footer p{
+            font-size: 80%;
+        }
+        .footer{
+            position: absolute;
+            top: 120vw;
+            padding-left: 1em;
+        }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="bodyWrapper">
+    <div class="topScore">  
+        <h3>Top Scores</h3>
+        <div class="first"><img src="images/avatar.JPG" alt=""></div>
+        <div  class="second"><img src="images/avatar.JPG" alt=""></div>
+        <div  class="third"><img src="images/avatar.JPG" alt=""></div>
+    </div>
+        <div class="navBar">
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">leaderboard</a></li>
+
+                </ul>
+            </div>
+            <div class="sortBut">
+                <!--<input type="text" placeholder="search interns...">-->
+                <button><a href="#">sort interns</a></button>
+            </div>
+        </div>
+        <div class="topScoreBg"></div>
+        <div class="mainTab">
+            <div class="allInterns">
+                <ul>
+                        <div class="intern"><li><img src="images/avatar.JPG" alt=""><div class="score"><h1>13</h1></div><a href="#"><i class="fa fa-twitter-square" ></i></a>
+                        <a href="#"><i class="fa fa-facebook" ></i></a></li></div>
+                        <div class="intern"><li><img src="images/avatar.JPG" alt=""><div class="score"><h1>20</h1></div><a href="#"><i class="fa fa-twitter-square" ></i></a>
+                        <a href="#"><i class="fa fa-facebook" ></i></a></li></div>
+                        <div class="intern"><li><img src="images/avatar.JPG" alt=""><div class="score"><h1>31</h1></div><a href="#"><i class="fa fa-twitter-square" ></i></a>
+                        <a href="#"><i class="fa fa-facebook" ></i></a></li></div>
+                        <div class="intern"><li><img src="images/avatar.JPG" alt=""><div class="score"><h1>13</h1></div><a href="#"><i class="fa fa-twitter-square" ></i></a>
+                        <a href="#"><i class="fa fa-facebook" ></i></a></li></div>
+                        <div class="intern"><li><img src="images/avatar.JPG" alt=""><div class="score"><h1>20</h1></div><a href="#"><i class="fa fa-twitter-square" ></i></a>
+                        <a href="#"><i class="fa fa-facebook" ></i></a></li></div>
+                        <div class="intern"><li><img src="images/avatar.JPG" alt=""><div class="score"><h1>31</h1></div><a href="#"><i class="fa fa-twitter-square" ></i></a>
+                        <a href="#"><i class="fa fa-facebook" ></i></a></li></div>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy;2020 design by MarleyByte</p>
+        </div>
+    </div>
+</body>
+</html>
